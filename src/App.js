@@ -3,9 +3,10 @@ import {
   HashRouter as Router,
   Redirect,
   Route,
-  Route,
   Switch,
 } from  'react-router-dom';
+import Search from './components/Search';
+
 
 import './App.css';
 
@@ -14,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Search />
     </div>
   );
 }
