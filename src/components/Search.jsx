@@ -19,7 +19,7 @@ function Search() {
         try {
             // console.log(name);
             // async function to get search results from database
-            const searchResults = await axios.get('/api/search');
+            const searchResults = await axios.get(`/api/search/${name}`);
             console.log('search results:', searchResults.data);
             // dispatch (send) response to reducer
             dispatch({type: 'SHOW_SEARCH_RESULTS', payload: searchResults.data});
