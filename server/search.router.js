@@ -9,10 +9,10 @@ const directory = [
         location: 'St. Paul, MN',
         salary: '$1,000,000'
     }
-]
+];
 
 
-router.get('/', (req, res) => {
+router.get('/:name', (req, res) => {
     // const querString = `SELECT * from directory WHERE ....`;
     // pool.query(queryString).then((result) => {
     //     res.send(result.rows);
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     //     console.log('Error in search router:', err);
     //     res.sendStatus(500);
     // })
-    console.log('/search GET');
+    console.log('/search GET:', req.params.name);
     res.send(directory);
 });
 
