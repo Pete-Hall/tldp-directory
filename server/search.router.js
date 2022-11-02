@@ -13,14 +13,15 @@ const directory = [
 
 
 router.get('/', (req, res) => {
-    const querString = `SELECT * from directory WHERE ....`;
-    pool.query(queryString).then((result) => {
-        // res.send(result.rows);
-        res.send(directory);
-    }).catch((err) => {
-        console.log('Error in search router:', err);
-        res.sendStatus(500);
-    })
+    // const querString = `SELECT * from directory WHERE ....`;
+    // pool.query(queryString).then((result) => {
+    //     res.send(result.rows);
+    // }).catch((err) => {
+    //     console.log('Error in search router:', err);
+    //     res.sendStatus(500);
+    // })
+    console.log('/search GET');
+    res.send(directory);
 });
 
 module.exports = router;
