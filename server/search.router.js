@@ -9,7 +9,7 @@ const directory = [
         location: 'St. Paul, MN',
         salary: '$1,000,000'
     }
-]
+];
 
 
 router.get('/', (req, res) => {
