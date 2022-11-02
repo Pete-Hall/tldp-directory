@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 function Results() {
-    const store = useSelector((store) => store);
+    const store = useSelector((store) => store); // update to search result reducer
 
-    
+    // map through reducer (in case there are more than 1 people returned)
     return (
         <div>
             <p>NAME:</p>
-            <p>Pete</p>
+            <p>store.name</p>
             <p>Phone Number:</p>
-            <p>123-456-7890</p>
+            <p>store.phone</p>
             <p>Job Role:</p>
             <p>TLDP Software Engineer</p>
             <p>Work Location:</p>
