@@ -12,6 +12,8 @@ function Search() {
 
     const handleSearchButton = () => {
         console.log(name);
+        // async function to get search results from database
+        // dispatch (send) response to reducer
     }
 
     return (
