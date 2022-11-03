@@ -14,7 +14,8 @@ const directory = [
 
 router.get('/:name', (req, res) => {
     console.log('/search GET:', req.params.name);
-    const queryString = `SELECT * from directory ORDER BY id ASC `;
+    // const queryString = `SELECT * from directory ORDER BY id ASC `;
+    const queryString = `SELECT * FROM directory WHERE name ILIKE '%${req.params.name}%';`
     pool.query(queryString).then((result) => {
         res.send(result.rows);
     }).catch((err) => {
