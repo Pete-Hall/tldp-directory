@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const pool = require('./modules/pool');
 
 const directory = [
     {
@@ -11,17 +12,16 @@ const directory = [
     }
 ];
 
-
 router.get('/:name', (req, res) => {
-    // const querString = `SELECT * from directory WHERE ....`;
-    // pool.query(queryString).then((result) => {
-    //     res.send(result.rows);
-    // }).catch((err) => {
-    //     console.log('Error in search router:', err);
-    //     res.sendStatus(500);
-    // })
     console.log('/search GET:', req.params.name);
-    res.send(directory);
+    const queryString = `SELECT * from directory ORDER BY id ASC `;
+    pool.query(queryString).then((result) => {
+        res.send(result.rows);
+    }).catch((err) => {
+        console.log('Error in search router:', err);
+        res.sendStatus(500);
+    })
+    // res.send(directory);
 });
 
 module.exports = router;
