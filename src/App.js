@@ -12,7 +12,6 @@ import Search from './components/Search';
 import './App.css';
 import Results from './components/Results';
 
-// TODO: finish client side routing, importing components, etc
 
 function App() {
   return (
