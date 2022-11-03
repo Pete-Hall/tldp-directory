@@ -35,9 +35,9 @@ function Login() {
 
                     // send dispatch of userResults.data[i]
                     dispatch({type: 'STORE_LOGIN', payload: userResults.data[i]});
+                    navigate('/search');
                 }
             }
-            navigate('/search');
 
             // // dispatch (send) response to reducer
             // dispatch({type: 'SHOW_SEARCH_RESULTS', payload: searchResults.data});
