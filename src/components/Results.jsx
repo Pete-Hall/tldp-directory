@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 function Results() {
+    
     const searchResults = useSelector((store) => store.searchReducer);
 
     return (

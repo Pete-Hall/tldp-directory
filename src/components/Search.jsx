@@ -7,6 +7,8 @@ function Search() {
 
     const dispatch = useDispatch();
 
+    const loggedInUser = useSelector((store) => store.loginReducer);
+
     const [name, setName] = useState('');
 
     const handleSearchBar = (e) => {
@@ -29,6 +31,12 @@ function Search() {
 
     return (
         <div>
+            {
+                loggedInUser.length > 0 ?
+                <h3>{JSON.stringify(loggedInUser)}</h3>
+                :
+                <></>
+            }
             <input type="text" placeholder='Search for a name ...' onChange={handleSearchBar}/>
             <button onClick={handleSearchButton}>SEARCH</button>
             <Results />

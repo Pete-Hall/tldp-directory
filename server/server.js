@@ -5,12 +5,14 @@ const app = express();
 
 // Routers go here
 const searchRouter = require('./search.router');
+const loginRouter = require('./login.router');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes go here
 app.use('/api/search', searchRouter);
+app.use('/api/login', loginRouter);
 
 app.use(express.static('build'));
 
