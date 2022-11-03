@@ -48,7 +48,8 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className='loginBox'>
+            <h2>Searchable Enterprise Directory</h2>
             <input type="text" placeholder='Username' onChange={handleUsername}/>
             <br/>
             <input type="text" placeholder='Password' onChange={handlePassword}/>
