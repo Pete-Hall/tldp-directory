@@ -30,7 +30,7 @@ function Login() {
             // match to see if the inputted username/password matches the database
             for(let i = 0; i<userResults.data.length; i++) {
                 if(userResults.data[i].username === username && userResults.data[i].password === password) {
-                    console.log('Match!:', username, userResults.data[i].username, password, userResults.data[i].password);
+                    // console.log('Match!:', username, userResults.data[i].username, password, userResults.data[i].password);
                     console.log(userResults.data[i]);
 
                     // send dispatch of userResults.data[i]

@@ -5,7 +5,7 @@ const pool = require('./modules/pool');
 router.get('/', (req, res) => {
     console.log('/login GET');
     // const queryString = `SELECT * FROM directory`
-    const queryString = `SELECT "id", "username", "password" FROM directory`
+    const queryString = `SELECT "id", "username", "password", "hr" FROM directory`
     pool.query(queryString).then((result) => {
         res.send(result.rows);
     }).catch((err) => {
