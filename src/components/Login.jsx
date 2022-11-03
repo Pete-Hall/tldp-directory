@@ -1,9 +1,8 @@
 import axios from 'axios';
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import Results from './Results';
 
-function Search() {
+function Login() {
 
     const dispatch = useDispatch();
 
@@ -29,11 +28,13 @@ function Search() {
 
     return (
         <div>
-            <input type="text" placeholder='Search for a name ...' onChange={handleSearchBar}/>
+            <input type="text" placeholder='Username' onChange={handleSearchBar}/>
+            <br/>
+            <input type="text" placeholder='Password' />
+            <br/>
             <button onClick={handleSearchButton}>SEARCH</button>
-            <Results />
         </div>
     )
 }
 
-export default Search
+export default Login
