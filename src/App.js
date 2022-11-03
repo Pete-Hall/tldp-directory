@@ -6,22 +6,23 @@ import {
   Routes,
   Switch,
 } from  'react-router-dom';
-import Search from './components/Search';
-
-
 import './App.css';
+import Search from './components/Search';
 import Results from './components/Results';
-
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
+        <Switch> */}
         <Routes>
-          <Route path="/" element={<Search />} />
+          <Route path="/" exact element={<Login />} />
+          <Route path="/search" element={<Search />} />
           <Route path = "/details/:name" element={<Results />} />
         </Routes>
-      </Router>
+        {/* </Switch>
+      </Router> */}
     </div>
   );
 }

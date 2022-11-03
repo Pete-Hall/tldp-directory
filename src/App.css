@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  background-color: #f50002;
+  color: white;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+input {
+  border: 1px solid black;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.loginBox {
+  border: 1px solid black;
+  margin:auto;
+  width: 40%;
+  margin-top: 3rem;
+}

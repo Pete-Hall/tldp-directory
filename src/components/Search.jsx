@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Results from './Results';
 
@@ -7,7 +7,11 @@ function Search() {
 
     const dispatch = useDispatch();
 
-    const store = useSelector((store) => store);
+    const loggedInUser = useSelector((store) => store.loginReducer);
+
+    useEffect(() => {
+        console.log('in Search, loggedInUser:', loggedInUser);
+    },[loggedInUser])
 
     const [name, setName] = useState('');
 
@@ -31,6 +35,16 @@ function Search() {
 
     return (
         <div>
+            {
+                loggedInUser ?
+                <>
+                    <p>Hello, {loggedInUser.username}!</p>
+                </>
+                :
+                <>
+                    <p>....</p>
+                </>
+            }
             <input type="text" placeholder='Search for a name ...' onChange={handleSearchBar}/>
             <button onClick={handleSearchButton}>SEARCH</button>
             <Results />
